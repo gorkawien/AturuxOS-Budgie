@@ -28,8 +28,8 @@ keep the installation process as user friendly as possible.
 
      `mount -o remount,size=1G /run/archiso/cowspace`
 
-2. Clone this repository: `git clone git://github.com/gorkawien/Aturux-OS`
-3. Run the script: `cd Aturux-OS/ && chmod +x setup && ./setup`
+2. Clone this repository: `git clone https://github.com/gorkawien/AturuxOS-Budgie`
+3. Run the script: `cd AturuxOS-Budgie/ && chmod +x setup && ./setup`
 
 ## Features
 
