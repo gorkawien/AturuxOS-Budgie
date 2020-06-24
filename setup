@@ -769,14 +769,13 @@ use.\n\nGraphical environment:" 12 75 3 \
 install the 'extras' group?\n\nIt contains additional utilities and \
 applications that integrate well with the Budgie desktop." 8 60
                 if [ $? -eq 0 ]; then
-                  DESKTOP_PACKAGES+=('qalculate-gtk' 'pulseaudio-equalizer-ladspa' 'qastools' 'w3m’ 'gnome-system-monitor' 'tilix' 'plank' 'evince' 'pcmanfm' 'avidemux-qt' 'geany' 'geany-plugins' 'firefox' 'sysstat' 'thunderbird' 'telegram-desktop' 'bashtop' 'fractal' 'lollypop' 'file-roller' 'transmission-gtk' 'vlc' 'gpicview' 'kodi' 'simplescreenrecorder' 'cheese' 'aria2' 'pdfarranger' 'hplip' 'git' 'wget' 'neofetch' 'nano' 'reflector' 'p7zip' 'arj' 'lzip' 'lha' 'sharutils' 'lzop' 'cabextract' 'lrzip' 'youtube-dl' 'mesa-demos' 'tree' 'bind-tools' 'dmidecode' 'hddtemp' 'jshon' 'expac' 'cups' 'cups-pdf' 'xorg-xinit' 'inetutils' 'keepassxc' 'speedtest-cli' 'wavemon' 'cronie' 'uget' 'usbutils' 'bash-completion' 'pacman-contrib' 'calibre' 'unarj' 'cpio' )
+                  DESKTOP_PACKAGES+=('qalculate-gtk' 'pulseaudio-equalizer-ladspa' 'qastools' 'w3m’ 'gnome-system-monitor' 'tilix' 'plank' 'evince' 'pcmanfm' 'avidemux-qt' 'geany' 'geany-plugins' 'firefox' 'sysstat' 'thunderbird' 'telegram-desktop' 'bashtop' 'fractal' 'lollypop' 'file-roller' 'transmission-gtk' 'vlc' 'gpicview' 'kodi' 'simplescreenrecorder' 'cheese' 'aria2' 'pdfarranger' 'hplip' 'git' 'wget' 'neofetch' 'nano' 'reflector' 'p7zip' 'arj' 'lzip' 'lha' 'sharutils' 'lzop' 'cabextract' 'lrzip' 'youtube-dl' 'mesa-demos' 'tree' 'bind-tools' 'dmidecode' 'hddtemp' 'jshon' 'expac' 'cups' 'cups-pdf' 'xorg-xinit' 'inetutils' 'keepassxc' 'speedtest-cli' 'wavemon' 'cronie' 'uget' 'usbutils' 'bash-completion' 'pacman-contrib' 'calibre' 'unarj' 'cpio')
                 fi
                 xinit_config="export XDG_CURRENT_DESKTOP=Budgie:GNOME ; exec budgie-desktop"
                 ;;
       "Cinnamon") DESKTOP_PACKAGES+=('cinnamon' 'cinnamon-translations' 'nemo-fileroller')
                   xinit_config="exec cinnamon-session"
                   ;;
-   
       "GNOME") DESKTOP_PACKAGES+=('gnome')
                dialog --title "Install Extras" --yesno "Would you like to \
 install the 'gnome-extra' group?\n\nIt contains additional utilities and \
