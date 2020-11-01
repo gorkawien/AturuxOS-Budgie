@@ -763,12 +763,12 @@ use.\n\nGraphical environment:" 12 75 3 \
   if [ "$DESKTOP" != "None" ]; then
     DESKTOP_PACKAGES+=("${DESKTOP_DEFAULTS[@]}")
     case "$GUI" in
-      "Budgie") DESKTOP_PACKAGES+=('budgie-desktop' 'gnome-control-center')
+      "Budgie") DESKTOP_PACKAGES+=('budgie-desktop' 'gnome-control-center' 'mutter')
                 dialog --title "Install Extras" --yesno "Would you like to \
 install the 'extras' group?\n\nIt contains additional utilities and \
 applications that integrate well with the Budgie desktop." 8 60
                 if [ $? -eq 0 ]; then
-                  DESKTOP_PACKAGES+=('plocate' 'lm_sensors' 'gvfs' 'gvfs-mtp' 'sysstat' 'gpick' 'ntp' 'mutter' 'exfat-utils' 'ntfs-3g' 'qalculate-gtk' 'qastools' 'kodi-x11' 'htop' 'gnome-terminal' 'evince' 'nautilus' 'avidemux-qt' 'gedit' 'firefox' 'thunderbird' 'telegram-desktop' 'fractal' 'lollypop' 'file-roller' 'qbittorrent' 'vlc' 'eog' 'kodi' 'simplescreenrecorder' 'cheese' 'aria2' 'pdfarranger' 'hplip' 'git' 'wget' 'neofetch' 'nano' 'reflector' 'p7zip' 'gnome-screenshot' 'youtube-dl' 'mesa-demos' 'tree' 'bind-tools' 'dmidecode' 'hddtemp' 'jshon' 'expac' 'cups' 'cups-pdf' 'xorg-xinit' 'inetutils' 'keepassxc' 'speedtest-cli' 'wavemon' 'cronie' 'uget' 'usbutils' 'bash-completion' 'pacman-contrib' 'calibre' )
+                  DESKTOP_PACKAGES+=('plocate' 'lm_sensors' 'gvfs' 'gvfs-mtp' 'sysstat' 'gpick' 'ntp' 'exfat-utils' 'ntfs-3g' 'qalculate-gtk' 'qastools' 'kodi-x11' 'htop' 'gnome-terminal' 'evince' 'nautilus' 'avidemux-qt' 'gedit' 'firefox' 'thunderbird' 'telegram-desktop' 'fractal' 'lollypop' 'file-roller' 'qbittorrent' 'vlc' 'eog' 'kodi' 'simplescreenrecorder' 'cheese' 'aria2' 'pdfarranger' 'hplip' 'git' 'wget' 'neofetch' 'nano' 'reflector' 'p7zip' 'gnome-screenshot' 'youtube-dl' 'mesa-demos' 'tree' 'bind-tools' 'dmidecode' 'hddtemp' 'jshon' 'expac' 'cups' 'cups-pdf' 'xorg-xinit' 'inetutils' 'keepassxc' 'speedtest-cli' 'wavemon' 'cronie' 'uget' 'usbutils' 'bash-completion' 'pacman-contrib' 'calibre' )
                 fi
                 xinit_config="export XDG_CURRENT_DESKTOP=Budgie:GNOME ; exec budgie-desktop"
                 ;;
