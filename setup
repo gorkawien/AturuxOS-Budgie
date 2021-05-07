@@ -763,7 +763,7 @@ use.\n\nGraphical environment:" 12 75 3 \
   if [ "$DESKTOP" != "None" ]; then
     DESKTOP_PACKAGES+=("${DESKTOP_DEFAULTS[@]}")
     case "$GUI" in
-      "Budgie") DESKTOP_PACKAGES+=('budgie-desktop' 'gnome-control-center' 'mutter')
+      "Budgie") DESKTOP_PACKAGES+=('budgie-desktop' 'gnome-control-center' 'budgie-screensaver')
                 dialog --title "Install Extras" --yesno "Would you like to \
 install the 'extras' group?\n\nIt contains additional utilities and \
 applications that integrate well with the Budgie desktop." 8 60
